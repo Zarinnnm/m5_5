@@ -58,7 +58,7 @@ export function addUserAction(user) {
                 alert('success')
                 dispatch(falseLoading())
             } else if (response.status === 404) {
-                alert('404 Not Found')
+                alert('404 No')
                 dispatch(falseLoading())
             }
         } catch {

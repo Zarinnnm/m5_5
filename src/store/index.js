@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import titleReducer from './titleSlice'
 import logger from "redux-logger";
+import taskReducer from './taskSlice'
+import filterReducer from './filterSlice'
 
 export const store = configureStore({
     reducer: {
-        titleReducer,
+        taskReducer,
+        filterReducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 })

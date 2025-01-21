@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import {changeStatus, deleteTask} from "../../store/taskSlice";
 
 
 const TaskList = () => {
@@ -22,10 +23,12 @@ const TaskList = () => {
                     <input
                         type="checkbox"
                         checked={task.completed}
-                        onChange={() => dispatch()}
+                        onChange={(e) => { dispatch(changeStatus(task.id))
+
+                        }}
                     />
                     <span>{task.title}</span>
-                    <button>Удалить</button>
+                    <button onClick={() => dispatch(deleteTask(task.id))}>Удалить</button>
                 </div>
             ))}
         </div>

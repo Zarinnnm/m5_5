@@ -14,7 +14,9 @@ const TaskList = () => {
         if (status === 'completed') return task.completed;
         if (status === 'uncompleted') return !task.completed
         return true;
+
     })
+    console.log(123)
 
     return (
         <div>
